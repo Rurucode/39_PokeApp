@@ -1,24 +1,32 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Card from '../Card/Card';
+import ListaPokemon from '../ListaPokemon/ListaPokemon';
+import './Busqueda.css'
+import {contextPintar} from "../../../context/contextPintar";
+import {useDebounce} from "use-debounce"
+
 
 const Busqueda = () => {
 
   const [pokemon, setPokemon] = useState("");
   const [pokemon2, setPokemon2] = useState([]);
+  const [relleno] = useDebounce(pokemon, 2000);
+
   
   useEffect(() => { 
-    if (pokemon){
+    if (relleno){
       const pokeAxios = async () => {
         try {
-          const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`);
+          const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${relleno.toLowerCase()}`);
           const data = await response.data;
           console.log(data);
 
           const pokeInfo = {
             name: data.name,
             img: data.sprites.versions["generation-v"]["black-white"].animated.front_default || data.sprites.front_default,
-            weight: data.weight
+            weight: data.weight,
+            id: data.id
           }
           setPokemon2([...pokemon2, pokeInfo]);
     
@@ -30,13 +38,13 @@ const Busqueda = () => {
       setPokemon("")
 
     } 
-  },[pokemon]);
+  },[relleno]);
 
-  const handlesubmit = async (event) => {
+  const handleChange = async (event) => {
     event.preventDefault()
-    const pokeBuscado = event.target.pokeBuscado.value;
+    const pokeBuscado = event.target.value;
     setPokemon(pokeBuscado);
-    event.target.pokeBuscado.value = ""
+    // event.target.pokeBuscado.value = ""
   }
 
   const pintar = () => {
@@ -44,12 +52,14 @@ const Busqueda = () => {
   }
   
   return <div>
-    <form onSubmit={handlesubmit}>
+    <form onSubmit={(event)=>{event.preventDefault()}}>
       <label htmlFor="pokeBuscado"></label>
-      <input type="text" id="pokeBuscado" name="pokeBuscado"/>
-      <input type="submit" value="Buscar Pokemon"/>
+      <input type="text" onChange={handleChange} id="pokeBuscado" name="pokeBuscado"/>
     </form>
-    {pintar()}
+    <contextPintar.Provider value={{pintar}}>
+      <ListaPokemon/>
+    </contextPintar.Provider> 
+
   </div>;
 
 };

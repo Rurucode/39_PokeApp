@@ -1,0 +1,4 @@
+.resultados {
+    display: flex;
+    flex-wrap: wrap     ;
+}
