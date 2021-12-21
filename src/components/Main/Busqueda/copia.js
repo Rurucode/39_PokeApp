@@ -19,7 +19,7 @@ const Busqueda = () => {
   const handlesubmit = (event) => {
     event.preventDefault()
     const pokeBuscado = event.target.pokeBuscado.value;
-    setPokemon({...pokemon, input: pokeBuscado});
+    setPokemon(pokemon.input: pokeBuscado);
     fetch(pokemon);
     console.log(pokemon);
   }

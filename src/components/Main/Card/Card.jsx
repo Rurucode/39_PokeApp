@@ -1,8 +1,10 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
   return <section>
-    <p>{}</p>
+    <p>Nombre: {props.data.name}</p>
+    <img src={props.data.img} alt="Pokemon imagen" />
+    <p>Peso: {props.data.weight}</p>
   </section>;
 };
 
