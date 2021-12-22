@@ -11,7 +11,7 @@ const Busqueda = () => {
 
   const [pokemon, setPokemon] = useState("");
   const [pokemon2, setPokemon2] = useState([]);
-  const [relleno] = useDebounce(pokemon, 2000);
+  const [relleno] = useDebounce(pokemon, 1500);
 
   
   useEffect(() => { 
@@ -40,11 +40,18 @@ const Busqueda = () => {
     } 
   },[relleno]);
 
+  // {{},{},{}}
+  // console.log (pokemon2.every(elem => elem.name === pokemon)+ "-----------------")
+  // const fun = pokemon2.every(elem =>{elem.name === pokemon)
+
   const handleChange = async (event) => {
     event.preventDefault()
     const pokeBuscado = event.target.value;
-    setPokemon(pokeBuscado);
+    // if(!pokemon2.every(elem => elem.name === pokemon)){
+      
+    // }
     // event.target.pokeBuscado.value = ""
+    setPokemon(pokeBuscado);
   }
 
   const pintar = () => {
@@ -53,7 +60,7 @@ const Busqueda = () => {
   
   return <div>
     <form onSubmit={(event)=>{event.preventDefault()}}>
-      <label htmlFor="pokeBuscado"></label>
+      <label htmlFor="pokeBuscado">Introduce el nombre del Pokémon que quieres buscar.</label><br></br>
       <input type="text" onChange={handleChange} id="pokeBuscado" name="pokeBuscado"/>
     </form>
     <contextPintar.Provider value={{pintar}}>
