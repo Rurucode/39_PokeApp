@@ -34,24 +34,23 @@ const Busqueda = () => {
           console.log(error);
         }
       }
-      pokeAxios();
-      setPokemon("")
+      if(pokemon2.every(elem => elem.name !== pokemon)){
+        pokeAxios();
+        setPokemon("")
+    }
 
     } 
   },[relleno]);
 
   // {{},{},{}}
-  // console.log (pokemon2.every(elem => elem.name === pokemon)+ "-----------------")
+  // console.log (pokemon2.every(elem => elem.name !== pokemon)+ "-----------------")
   // const fun = pokemon2.every(elem =>{elem.name === pokemon)
 
   const handleChange = async (event) => {
     event.preventDefault()
     const pokeBuscado = event.target.value;
-    // if(!pokemon2.every(elem => elem.name === pokemon)){
-      
-    // }
-    // event.target.pokeBuscado.value = ""
     setPokemon(pokeBuscado);
+    // event.target.pokeBuscado.value = ""
   }
 
   const pintar = () => {

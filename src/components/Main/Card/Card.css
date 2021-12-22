@@ -1,5 +1,15 @@
 .card {
     border: 2px solid black;
-    border-radius: 3px;
+    border-radius: 6px;
     width: 15vw;
+    background-image: url("../../../assets/pokedex.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 2rem;
+}
+
+.card p {
+    color: white;
+    text-shadow: 2px black;
+    margin-top: 2rem;
 }
