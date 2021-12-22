@@ -1,0 +1,29 @@
+.divHomefoto {
+    display: flex;
+    justify-content: center;
+    height: 55vh;
+    margin-top: 5rem;
+}
+
+.homeFoto {
+    animation: respiracion 4s ease-out infinite normal;
+
+}
+
+@keyframes respiracion {
+    0% {
+      transform: scale(0.8);
+    }
+  
+    25% {
+      transform: scale(1.1);
+    }
+  
+    60% {
+      transform: scale(0.9);
+    }
+  
+    100% {
+      transform: scale(0.7);
+    }
+  }

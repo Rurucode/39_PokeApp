@@ -4,8 +4,8 @@ import titulo from '../../../assets/pokemonTitle.png'
 
 const Home = () => {
 
-  return <div>
-    <img src={titulo} alt="Titulo foto" />
+  return <div className="divHomefoto">
+    <img className="homeFoto" src={titulo} alt="Titulo foto" />
   </div>;
 };
 

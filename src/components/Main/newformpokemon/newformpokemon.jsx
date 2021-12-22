@@ -9,7 +9,7 @@ const Newformpokemon = () => {
   const onSubmit = data => console.log(data);
 
 
-  return <div>
+  return <div className="formPadre">
     <form onSubmit={handleSubmit(onSubmit)} className="creacion">
         <img className="fondoForm" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/24814fec-42f9-4c5c-bda3-998389c5afaa/d5xdzaj-2d65639c-ccd9-4b97-952a-202b399e6bfb.png" alt="Fondo" />
         

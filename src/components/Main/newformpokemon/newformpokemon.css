@@ -1,21 +1,34 @@
+.formPadre {
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
 .formDiv {
     display: flex;
     justify-content: center;
+    
 }
 
 .creacion {
-    border: 2px solid black;
-    border-radius: 10px;
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
     width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 5rem;
+    margin-left: 4rem;
 }
+
+
 
 .creacion input {
     height: 2rem;
     font-size: 1rem;
+    border: 1 solid black;
+    border-radius: 4px;
 }
 
 .creacion label p{
@@ -23,12 +36,15 @@
     font-family: 'Italiana'
 }
 
+#title, #id, #url, #peso {
+    width: 70%;
+}
+
 .submit {
-    height: 4rem;
-    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+    height: 6rem;
+    background-image: linear-gradient(to right, #ffdc16 0%, #12D8FA  51%, #1FA2FF  100%);
     margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
+    /* text-align: center; */
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
@@ -36,7 +52,11 @@
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
-    font-size: 1.5rem;    
+    font-size: 1.5rem;
+    width: 100%; 
+    border: 1px solid black;
+    box-shadow: ;
+       
 }
 
 .submit:hover {

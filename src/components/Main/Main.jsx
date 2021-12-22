@@ -7,7 +7,7 @@ import Newformpokemon from "./newformpokemon/newformpokemon";
 
 
 const Main = () => {
-  return <div>
+  return <div className="main">
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/search" element={<Busqueda/>} />

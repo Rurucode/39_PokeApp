@@ -1,15 +1,56 @@
 .card {
-    border: 2px solid black;
-    border-radius: 6px;
-    width: 15vw;
-    background-image: url("../../../assets/pokedex.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card p {
-    color: white;
-    text-shadow: 2px black;
-    margin-top: 2rem;
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 20vw;
+    min-height: 20vh;
+    background-image: url("../../../assets/terrenogif.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1rem;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
+
+.foto img {
+    width: 30%;
+}
+
+.datos  {
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #e9e500 0%, #cfd080 100%);
+    border: 2px solid black;
+    width: 20vw;
+    border-radius: 6px;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.key {
+    color: #000000;
+    /* -webkit-text-stroke: 0.05rem #000000; */
+    font-family:'Caveat Brush';
+    font-size: 1.4rem;
+    font-weight: bold;
+
+}
+
+span {
+    color: #f01919;
+    /* -webkit-text-stroke: 0.05rem #000000; */
+    font-family: 'Bangers' ;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin-left: 1rem;
+
+}
+

@@ -1,9 +1,69 @@
+.navegacion {
+    height: 15vh;
+    background-image: linear-gradient(to right, #d42923 0%, #b31217  51%, #e52d27  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    display: block;
+    border-bottom: 20px solid black;
+    display: flex;
+    align-items: center;
+
+}
+
 ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+}
+a {
+    text-decoration:none;
 }
 
 li {
-    list-style: none;    
+    list-style: none;
+    
 }
+
+.logo {
+    width: 6rem;
+    margin: 3rem;
+    transition: 0.5s;
+
+}
+
+.inicio {
+    width: 8rem;
+    margin: 0 4rem 0 0;
+    transition: 0.5s;
+
+
+}
+
+.atrapa {
+    width: 25rem;
+    margin: 0 4rem 0 0;
+    transition: 0.5s;
+
+}
+
+.crea {
+    width: 25rem;
+    margin: 0 4rem 0 0;
+    transition: 0.5s;
+
+}
+
+
+
+.logo:hover, .inicio:hover, .atrapa:hover, .crea:hover {
+    transform: scale(1.1);
+}
+
+
+
+
