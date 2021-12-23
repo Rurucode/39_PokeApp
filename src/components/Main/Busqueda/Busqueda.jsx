@@ -58,7 +58,7 @@ const Busqueda = () => {
   }
   
   return <div>
-    <form onSubmit={(event)=>{event.preventDefault()}}>
+    <form  className='formbuscar' onSubmit={(event)=>{event.preventDefault()}}>
       <label htmlFor="pokeBuscado">Introduce el nombre del Pokémon que quieres buscar.</label><br></br>
       <input type="text" onChange={handleChange} id="pokeBuscado" name="pokeBuscado"/>
     </form>
